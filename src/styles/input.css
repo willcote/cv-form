@@ -1,0 +1,21 @@
+:root {
+  --dark-color: #131313;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px var(--dark-color) solid;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.input-container :not(:last-child) {
+  margin-bottom: 1rem;
+}
+.input-container label {
+  margin-bottom: 2px !important;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.5);
+}
