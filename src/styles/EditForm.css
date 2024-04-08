@@ -1,0 +1,28 @@
+h1 {
+  font-size: 2rem;
+}
+
+div.form-section {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+div :not(:last-child) {
+  margin-bottom: 20px;
+  min-width: 250px;
+}
+
+label {
+  text-align: left;
+  display: flex;
+  white-space: nowrap;
+}
+
+input {
+  margin-left: 0.5rem;
+  width: 100%;
+}
