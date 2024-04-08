@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import EditForm from './EditForm';
-import LockForm from './LockForm';
+import { useState } from "react";
+import EditForm from "./EditForm";
+import LockForm from "./LockForm";
 
 export default function CVForm() {
   const [editable, setEditable] = useState(true);

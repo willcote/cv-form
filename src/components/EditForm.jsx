@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import '../styles/EditForm.css';
+import { useState } from "react";
+import "../styles/EditForm.css";
 
 function FormInput({ id, label, type }) {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
 
   function handleChange(e) {
     setInput(e.target.value);
