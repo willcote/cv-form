@@ -18,21 +18,21 @@ function FormInput({ id, label, type, value, onChange }) {
   );
 }
 
-export default function EditForm({ onSubmit }) {
-  const [userInfo, setUserInfo] = useState({});
+export default function EditForm({ onSubmit, userInfo, handleChange }) {
+  // const [userInfo, setUserInfo] = useState({});
 
-  function handleChange(e) {
-    const id = e.target.id;
-    const value = e.target.value;
+  // function handleChange(e) {
+  //   const id = e.target.id;
+  //   const value = e.target.value;
 
-    let newInfo = {
-      ...userInfo,
-    };
+  //   let newInfo = {
+  //     ...userInfo,
+  //   };
 
-    newInfo[id] = (userInfo.id ? userInfo.id : '') + value;
+  //   newInfo[id] = (userInfo.id ? userInfo.id : '') + value;
 
-    setUserInfo(newInfo);
-  }
+  //   setUserInfo(newInfo);
+  // }
 
   return (
     <form>
