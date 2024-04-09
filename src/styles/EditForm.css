@@ -1,12 +1,25 @@
+:root {
+  --color-1: #91e5f6;
+  --color-5: #232225;
+}
+
+body {
+  background-color: var(--color-1);
+}
+
 h1 {
   font-size: 2rem;
+  line-height: 1.1;
+  margin-top: 0;
 }
 
 div.form-section {
+  background-color: rgba(255, 255, 255, 0.5);
+
   display: flex;
   flex-direction: column;
 
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: none;
   border-radius: 16px;
   padding: 16px;
 }

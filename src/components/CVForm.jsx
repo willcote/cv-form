@@ -1,12 +1,12 @@
-import { useState } from "react";
-import EditForm from "./EditForm";
-import LockForm from "./LockForm";
+import { useState } from 'react';
+import EditForm from './EditForm';
+import LockForm from './LockForm';
 
 export default function CVForm() {
   const [editable, setEditable] = useState(true);
-  const [userInfo, setUserInfo] = useState({});
+  // const [userInfo, setUserInfo] = useState({});
 
-  function handleSubmit() {
+  function handleSubmit(e) {
     // setUserInfo(e); // something like this
     setEditable(!editable);
   }
@@ -14,9 +14,9 @@ export default function CVForm() {
   return (
     <>
       {editable ? (
-        <EditForm onSubmit={handleSubmit} userInfo={userInfo} />
+        <EditForm onSubmit={handleSubmit} /*userInfo={userInfo} */ />
       ) : (
-        <LockForm userInfo={userInfo} />
+        <LockForm /* userInfo={userInfo} */ />
       )}
     </>
   );
