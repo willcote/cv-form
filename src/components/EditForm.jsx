@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../styles/EditForm.css';
+import { initialFormData } from '../initialFormData';
 
 function FormInput({ id, label, type, value, onChange }) {
   return (
