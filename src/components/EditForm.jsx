@@ -2,12 +2,6 @@ import { useState } from 'react';
 import '../styles/EditForm.css';
 
 function FormInput({ id, label, type, value, onChange }) {
-  // const [input, setInput] = useState('');
-
-  // function handleChange(e) {
-  //   setInput(e.target.value);
-  // }
-
   return (
     <>
       <label htmlFor={id}>
@@ -18,108 +12,93 @@ function FormInput({ id, label, type, value, onChange }) {
   );
 }
 
-export default function EditForm({ onSubmit, userInfo, handleChange }) {
-  // const [userInfo, setUserInfo] = useState({});
-
-  // function handleChange(e) {
-  //   const id = e.target.id;
-  //   const value = e.target.value;
-
-  //   let newInfo = {
-  //     ...userInfo,
-  //   };
-
-  //   newInfo[id] = (userInfo.id ? userInfo.id : '') + value;
-
-  //   setUserInfo(newInfo);
-  // }
-
+export default function EditForm({ onSubmit, userInfo, onChange }) {
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <div className="form-section general">
         <h1>General</h1>
         <FormInput
-          id="name"
+          id={0}
           label="name"
           type="text"
-          value={userInfo.name}
-          onChange={handleChange}
+          value={userInfo[0] && userInfo[0].value}
+          onChange={onChange}
         />
         <FormInput
-          id="email"
+          id={1}
           label="email"
           type="email"
-          value={userInfo.email}
-          onChange={handleChange}
+          value={userInfo[1] && userInfo[1].value}
+          onChange={onChange}
         />
         <FormInput
-          id="phone-number"
+          id={2}
           label="phone number"
           type="tel"
-          value={userInfo['phone-number']}
-          onChange={handleChange}
+          value={userInfo[2] && userInfo[2].value}
+          onChange={onChange}
         />
       </div>
+
       <div className="form-section education">
         <h1>Education</h1>
         <FormInput
-          id={'school'}
+          id={3}
           label={'school'}
           type={'text'}
-          value={userInfo.school}
-          onChange={handleChange}
+          value={userInfo[3] && userInfo[3].value}
+          onChange={onChange}
         />
         <FormInput
-          id={'major'}
+          id={4}
           label={'major'}
           type={'text'}
-          value={userInfo.major}
-          onChange={handleChange}
+          value={userInfo[4] && userInfo[4].value}
+          onChange={onChange}
         />
         <FormInput
-          id={'graduation-date'}
+          id={5}
           label={'graduation date'}
           type={'date'}
-          value={userInfo['graduation-date']}
-          onChange={handleChange}
+          value={userInfo[5] && userInfo[5].value}
+          onChange={onChange}
         />
       </div>
       <div className="form-section experience">
         <h1>Experience</h1>
         <FormInput
-          id={'company'}
+          id={6}
           label="company"
           type={'text'}
-          value={userInfo.company}
-          onChange={handleChange}
+          value={userInfo[6] && userInfo[6].value}
+          onChange={onChange}
         />
         <FormInput
-          id={'position'}
+          id={7}
           label="position"
           type={'text'}
-          value={userInfo.position}
-          onChange={handleChange}
+          value={userInfo[7] && userInfo[7].value}
+          onChange={onChange}
         />
         <FormInput
-          id={'responsibilities'}
+          id={8}
           label="responsibilities"
           type={'text'}
-          value={userInfo.responsibilities}
-          onChange={handleChange}
+          value={userInfo[8] && userInfo[8].value}
+          onChange={onChange}
         />
         <FormInput
-          id={'start-date'}
+          id={9}
           label="start date"
           type={'date'}
-          value={userInfo['start-date']}
-          onChange={handleChange}
+          value={userInfo[9] && userInfo[9].value}
         />
         <FormInput
-          id={'end-date'}
+          id={10}
           label="end date"
           type={'date'}
-          value={userInfo['end-date']}
-          onChange={handleChange}
+          value={userInfo[10] && userInfo[10].value}
+          onChange={onChange}
         />
       </div>
       <button type="button" onClick={onSubmit}>
