@@ -1,13 +1,35 @@
 export default function LockForm({ userInfo, onSubmit }) {
   return (
     <>
-      {Object.keys(userInfo).map((key) => {
-        const info = userInfo[key];
-
+      <h1>General</h1>
+      {userInfo.general.map((index) => {
+        let inputData = userInfo[index];
         return (
           <>
-            <h1>{info.label}</h1>
-            <p key={`${info.index}`}>{info.value}</p>
+            <h2>{inputData.label}</h2>
+            <p>{inputData.value}</p>
+          </>
+        );
+      })}
+
+      <h1>Education</h1>
+      {userInfo.education.map((index) => {
+        let inputData = userInfo[index];
+        return (
+          <>
+            <h2>{inputData.label}</h2>
+            <p>{inputData.value}</p>
+          </>
+        );
+      })}
+
+      <h1>Work</h1>
+      {userInfo.work.map((index) => {
+        let inputData = userInfo[index];
+        return (
+          <>
+            <h2>{inputData.label}</h2>
+            <p>{inputData.value}</p>
           </>
         );
       })}

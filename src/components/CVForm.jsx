@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import EditForm from './EditForm';
 import LockForm from './LockForm';
+import { initialFormData } from '../initialFormData';
 
 export default function CVForm() {
   const [editable, setEditable] = useState(true);
@@ -12,14 +13,15 @@ export default function CVForm() {
   //    1: {id: _, label: _, value: _},
   //    ...
   //  }
-  const [userInfo, setUserInfo] = useState(false);
+  const [userInfo, setUserInfo] = useState(initialFormData);
 
   function handleChange(e) {
     const id = e.target.id;
     const label = e.target.parentNode.textContent;
+    const type = e.target.type;
     const value = e.target.value;
 
-    let newInfo = { ...userInfo, [+id]: { id, label, value } };
+    let newInfo = { ...userInfo, [+id]: { id, label, type, value } };
 
     setUserInfo(newInfo);
   }
